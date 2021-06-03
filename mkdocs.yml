@@ -12,11 +12,20 @@ theme:
   highlightjs: true
 
 nav:
-  - CS: cs/index.md
-  - Algo: algo/index.md
+  - Computer Science:
+      - Data Structure: cs/ds/index.md
+      - Algorithm: cs/al/index.md
+  - Resource: rs/index.md
 
 markdown_extensions:
   - admonition
   - toc:
       toc_depth: 6
       permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  # MathJax 支持
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
