@@ -1,14 +1,14 @@
-site_name: Cinder
-site_url: https://sourcefoundry.org/cinder/
-site_author: Christopher Simpkins
-site_description: "A clean, responsive theme for static documentation websites that are generated with MkDocs"
-repo_url: "https://github.com/chrissimpkins/cinder"
-copyright: "Cinder is licensed under the <a href='https://github.com/chrissimpkins/cinder/blob/master/LICENSE.md'>MIT license</a>"
+site_name: TechDocs
+site_url: https://docs.seekincs.com
+site_author: Issac
+site_description: "A documentation website about technology, including computer science, algorithms (ml, dl, cv, nlp) and so on."
+repo_url: "https://github.com/seekincs/docs"
+copyright: "TechDocs is licensed under the <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a>."
 
 theme:
   name: null
   custom_dir: cinder
-  colorscheme: github
+  colorscheme: xcode
   highlightjs: true
 
 nav:
@@ -18,4 +18,5 @@ nav:
 markdown_extensions:
   - admonition
   - toc:
+      toc_depth: 6
       permalink: true
