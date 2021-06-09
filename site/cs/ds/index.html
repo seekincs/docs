@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A documentation website about technology, including computer science, algorithms (ml, dl, cv, nlp) and so on.">
+    <meta name="author" content="Issac">
+    <link rel="canonical" href="https://docs.seekincs.com/cs/ds/">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    
+    <title>Data Structure - TechDocs</title>
+    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href='//rsms.me/inter/inter.css' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&subset=latin-ext,latin' rel='stylesheet' type='text/css'>
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../../css/base.min.css" rel="stylesheet">
+    <link href="../../css/cinder.min.css" rel="stylesheet">
+
+    
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/xcode.min.css">
+        
+    
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
+    
+
+     
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="../..">TechDocs</a>
+            
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Computer Science <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="./">Data Structure</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../al/">Algorithm</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../rs/">Resource</a>
+                    </li>
+                
+                
+                </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                            <i class="fas fa-search"></i> Search
+                        </a>
+                    </li>
+                    <li class="disabled">
+                        <a rel="prev" >
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="next" href="../al/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/seekincs/docs/edit/master/docs/cs/ds/index.md"><i class="fab fa-github"></i> Edit on GitHub</a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#_1">数据结构</a></li>
+            <li class="second-level"><a href="#_2">基本概念</a></li>
+                
+                <li class="third-level"><a href="#_3">数据</a></li>
+                <li class="third-level"><a href="#_4">数据元素</a></li>
+                <li class="third-level"><a href="#_5">数据对象</a></li>
+                <li class="third-level"><a href="#_6">数据结构</a></li>
+                <li class="third-level"><a href="#_9">抽象数据类型</a></li>
+                <li class="third-level"><a href="#_10">算法</a></li>
+            <li class="second-level"><a href="#_11">线性表</a></li>
+                
+                <li class="third-level"><a href="#_12">特点</a></li>
+                <li class="third-level"><a href="#_13">顺序存储</a></li>
+                <li class="third-level"><a href="#_16">链式存储</a></li>
+            <li class="second-level"><a href="#_22">队列</a></li>
+                
+                <li class="third-level"><a href="#_23">数组队列</a></li>
+                <li class="third-level"><a href="#_24">单链队列</a></li>
+                <li class="third-level"><a href="#_25">循环队列</a></li>
+                <li class="third-level"><a href="#_26">双端队列</a></li>
+            <li class="second-level"><a href="#_27">栈</a></li>
+                
+                <li class="third-level"><a href="#_28">特点</a></li>
+                <li class="third-level"><a href="#_29">操作</a></li>
+                <li class="third-level"><a href="#_30">数组栈</a></li>
+                <li class="third-level"><a href="#_31">链式栈</a></li>
+                <li class="third-level"><a href="#_32">应用</a></li>
+            <li class="second-level"><a href="#_33">树</a></li>
+                
+                <li class="third-level"><a href="#_34">定义</a></li>
+                <li class="third-level"><a href="#_35">术语</a></li>
+                <li class="third-level"><a href="#_36">分类</a></li>
+                <li class="third-level"><a href="#_37">性质</a></li>
+                <li class="third-level"><a href="#_38">存储</a></li>
+                <li class="third-level"><a href="#_43">遍历</a></li>
+                <li class="third-level"><a href="#_48">线索二叉树</a></li>
+                <li class="third-level"><a href="#huffman">Huffman树</a></li>
+            <li class="second-level"><a href="#_49">图</a></li>
+                
+                <li class="third-level"><a href="#_50">定义</a></li>
+                <li class="third-level"><a href="#_51">分类</a></li>
+                <li class="third-level"><a href="#_52">术语</a></li>
+                <li class="third-level"><a href="#_53">表示</a></li>
+                <li class="third-level"><a href="#_61">遍历</a></li>
+                <li class="third-level"><a href="#_65">拓扑排序</a></li>
+                <li class="third-level"><a href="#minimum-spanning-treesmst">最小生成树(Minimum Spanning Trees,MST)</a></li>
+                <li class="third-level"><a href="#_71">最短路径问题</a></li>
+            <li class="second-level"><a href="#_81">参考资料</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="_1">数据结构<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">基本概念<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">数据<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>对客观事物的符号表示，在计算机科学中是指，所有能输入计算机中并被计算机程序处理的符号的总称。</p>
+<h3 id="_4">数据元素<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>数据的基本元素，在计算机程序中那个通常作为一个整体来考虑和研究。一个数据元素可以由若干个<strong>数据项</strong>组成。</p>
+<h3 id="_5">数据对象<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>性质相同的数据元素的集合，是数据的一个子集。</p>
+<h3 id="_6">数据结构<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>在计算机科学中，数据结构 (Data Structure) 是<strong>计算机中存储、组织数据的方式</strong>。</p>
+<p>数据结构是一个二元组：</p>
+<div class="arithmatex">\[
+DataStructure = (D,S)
+\]</div>
+<p>D 是数据元素的有限集，S 是 D 上的有限集。</p>
+<p>数据结构意味着接口或封装：一个数据结构可被视为两个函数之间的接口，或者是由数据类型联合组成的存储内容的访问方法封装。</p>
+<p>系统架构的关键因素是数据结构而非算法的见解，导致了多种形式化的设计方法与编程语言的出现。绝大多数的语言都带有某种程度上的模块化思想，透过将数据结构的具体实现封装隐藏于用户界面之后的方法，来让不同的应用程序能够安全地重用这些数据结构。C++、Java、Python 等面向对象的编程语言可使用类来达到这个目的。</p>
+<h4 id="_7">逻辑结构<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h4>
+<p>数据对象中数据元素之间的相互关系。存在以下几类。</p>
+<ul>
+<li><strong>集合</strong> 除了<em>同属于一个集合</em>外，没有其他关系</li>
+<li><strong>线性结构</strong> 数据元素之间存在一对一的关系</li>
+<li><strong>树形结构</strong> 数据元素之间存在一对多个的关系</li>
+<li><strong>图结构</strong> 数据元素之间存在多对多的关系</li>
+</ul>
+<h4 id="_8">物理结构 (也称存储结构)<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h4>
+<p>数据的逻辑结构在计算机中的存储形式。</p>
+<ul>
+<li><strong>顺序存储结构</strong> 是把数据元素存放在地址连续的存储单元里，其数据间的逻辑关系和物理关系是一致的。</li>
+<li><strong>链式存储结构</strong> 把数据元素存放在任意的存储单元里，这组存储单元可以是连续的，也可以是不连续的。数据元素的存储关系并不能反映其逻辑关系，因此需要用一个指针存放数据元素的地址，这样通过地址就可以找到相关联数据的位置。</li>
+</ul>
+<h3 id="_9">抽象数据类型<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p>抽象数据类型 (Abstract Data Type，ADT) 是计算机科学中具有类似行为的特定类别的数据结构的数学模型；或者具有类似语义的一种或多种程序设计语言的数据类型。抽象数据类型是间接定义的，通过其上的可执行的操作以及这些操作的效果的数学约束。</p>
+<p>抽象数据类型是纯粹理论实体，用于简化描述抽象算法，分类与评价数据结构，形式描述程序设计语言的类型系统。一个 ADT 可以用特定数据类型或数据结构实现，在许多程序设计语言中有许多种实现方式；或者用形式规范语言描述。</p>
+<p>形式上，ADT 可以使用一个三元组来描述：</p>
+<div class="arithmatex">\[
+ADT = (D,S,P)
+\]</div>
+<p>D 是数据对象，S 是 D 上的关系集，P 是对 D 的基本操作集。</p>
+<h3 id="_10">算法<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<p>以下是高德纳在他的著作《计算机程序设计艺术》里对算法的特征归纳：</p>
+<ul>
+<li><strong>输入</strong> 一个算法必须有零个或以上输入量。</li>
+<li><strong>输出</strong> 一个算法应有一个或以上输出量，输出量是算法计算的结果。</li>
+<li><strong>明确性</strong> 算法的描述必须无歧义，以保证算法的实际执行结果是精确地符合要求或期望，通常要求实际运行结果是确定的。</li>
+<li><strong>有限性</strong> 依据图灵的定义，一个算法是能够被任何图灵完全系统模拟的一串运算，而图灵机只有有限个状态、有限个输入符号和有限个转移函数(指令)。而一些定义更规定算法必须在有限个步骤内完成任务。</li>
+<li><strong>有效性</strong> 又称可行性。能够实现，算法中描述的操作都是可以通过已经实现的基本运算执行有限次来实现。</li>
+</ul>
+<h2 id="_11">线性表<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<h3 id="_12">特点<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h3>
+<p>在数据元素的<strong>非空有限集</strong>中，</p>
+<ul>
+<li>存在唯一一个被称为<em>第一个</em>的元素</li>
+<li>存在唯一一个被称为<em>最后一个</em>的元素</li>
+<li>除第一个之外，其他所有元素都有且只有一个<strong>前趋</strong></li>
+<li>除最后一个之外，其他所有元素有且只有一个<strong>后继</strong></li>
+</ul>
+<h3 id="_13">顺序存储<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<p>数组 (Array)，是<strong>由相同类型的元素 (element) 的集合所组成的数据结构</strong>，<strong>分配一块连续的内存来存储</strong>。利用元素的索 (index) 可以计算出该元素对应的存储地址。</p>
+<h4 id="_14">结构<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h4>
+<pre><code class="language-c">struct Array {
+    Type* elements;
+    int length;
+    int size;
+};
+</code></pre>
+<h4 id="_15">基本操作<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
+<ul>
+<li>初始化</li>
+<li>访问元素</li>
+<li>在指定位置插入</li>
+<li>在指定位置删除</li>
+<li>查找</li>
+</ul>
+<h3 id="_16">链式存储<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h3>
+<p>链表 (Linked List) 是一种常见的基础数据结构，是一种线性表，但是并不会按线性的顺序存储数据，而是在每一个节点里存到下一个节点的指针。由于不必须按顺序存储，链表在插入的时候可以达到 <span class="arithmatex">\(O(1)\)</span> 的复杂度，比数组快得多，但是查找一个节点或者访问特定编号的节点则需要 <span class="arithmatex">\(O(n)\)</span> 的时间。</p>
+<p>链表结构可以充分利用计算机内存空间，实现灵活的内存动态管理。但是链表失去了数组随机读取的优点，同时链表由于增加了结点的指针域，空间开销比较大。</p>
+<h4 id="_17">单向链表<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h4>
+<p>链表中最简单的一种是单向链表，它包含两个域，一个信息域和一个指针域。这个链接指向列表中的下一个节点，而最后一个节点则指向一个空值。单向链表只可向一个方向遍历。</p>
+<p><img alt="" src="asserts/single_linked_list.png" /></p>
+<h4 id="_18">双向链表<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h4>
+<p>双向链表也叫双链表。双向链表中不仅有指向后一个节点的指针，还有指向前一个节点的指针。这样可以从任何一个节点访问前一个节点，当然也可以访问后一个节点，以至整个链表。一般是在需要大批量的另外储存数据在链表中的位置的时候用。</p>
+<p><img alt="" src="asserts/double_linked_list.png" /></p>
+<h4 id="_19">循环链表<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h4>
+<p>循环链表中第一个节点之前就是最后一个节点，反之亦然。循环链表的无边界使得在这样的链表上设计算法会比普通链表更加容易。对于新加入的节点应该是在第一个节点之前还是最后一个节点之后可以根据实际要求灵活处理，区别不大。当然，如果只会在最后插入数据，处理也是很容易的。</p>
+<p><img alt="" src="asserts/cyclic_linked_list.png" /></p>
+<h4 id="_20">结构<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h4>
+<pre><code class="language-c">struct Node {
+    Type* value;
+    Node* prev;
+    Node* next;
+};
+</code></pre>
+<h4 id="_21">基本操作<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h4>
+<ul>
+<li>初始化</li>
+<li>访问元素</li>
+<li>插入 (尾插法，头插法，任意位置插入)</li>
+<li>在指定位置删除</li>
+</ul>
+<h2 id="_22">队列<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h2>
+<p>队列，又称为伫列(<code>queue</code>)，是先进先出(<code>FIFO</code>，<code>First-In-First-Out</code>)的线性表。在具体应用中通常用链表或者数组来实现。队列只允许在后端(称为<code>rear</code>)进行插入操作，在前端(称为<code>front</code>)进行删除操作。</p>
+<p>队列的操作方式和堆栈类似，唯一的区别在于队列只允许新数据在后端进行添加。</p>
+<h3 id="_23">数组队列<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">#define MAX_QSIZE 10 // 最大队列长度+1
+// 阵列队列的存储结构
+struct Queue {
+    int Array[MAX_QSIZE]; // 阵列空间大小
+    int front; // 队头
+    int rear; // 队尾
+    int length; // 队列长度
+};
+
+// 构造一个空队列Q
+Queue* Q_Init() {
+    Queue *Q = (Queue*)malloc(sizeof(Queue));
+    if (!Q){
+        // 存储分配失败
+        exit(OVERFLOW);
+    }
+    //初始化
+    Q-&gt;front = Q-&gt;rear = Q-&gt;length = 0;
+    return Q;
+}
+
+// 将Q清为空队列
+void Q_Clear(Queue *Q) {
+    //清除头尾下标和长度
+    Q-&gt;front = Q-&gt;rear = Q-&gt;length = 0;
+}
+
+// 入列
+int Q_Put(Queue *Q, int x) {
+    //如果当前元素数量等于最大数量 返回 -1
+    if (Q-&gt;rear + 1 == MAX_QSIZE) {
+        return -1;
+    }
+    Q-&gt;Array[Q-&gt;rear] = x;
+    Q-&gt;rear = Q-&gt;rear + 1;
+    //length + 1
+    Q-&gt;length = Q-&gt;length + 1;
+    return 1;
+}
+
+// 出列
+int Q_Poll(Queue *Q) {
+    //如果当前元素数量等于最大数量 返回 -1
+    if (Q-&gt;front + 1 == MAX_QSIZE)
+        return -1;
+    int x = Q-&gt;Array[Q-&gt;front];
+    Q-&gt;front = Q-&gt;front + 1;
+    // 移出后減少1
+    Q-&gt;length = Q-&gt;length - 1;
+    return x;
+}
+</code></pre>
+<h3 id="_24">单链队列<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<p>单链队列使用链表作为基本数据结构，所以不存在伪溢出的问题，队列长度也没有限制。但插入和读取的时间代价较高。</p>
+<pre><code class="language-c">// 定义单链队列的存储结构
+typedef struct QNode {
+    int data;
+    QNode *next;
+}QNode,*QNodePtr;
+
+typedef struct LinkQueue{
+    //队头 队尾 指针
+    QNodePtr front,rear;
+}LinkQueue;
+
+
+// 构造一个空队列Q
+LinkQueue* Q_Init() {
+    //申请内存
+    LinkQueue* Q = (LinkQueue*)malloc(sizeof(LinkQueue));
+    //如果 Q 为 NULL 说明 内存申请失败，结束程序
+    if (!Q)
+        exit(OVERFLOW);
+    //初始化头尾节点 指向相同地址
+    Q-&gt;front = Q-&gt;rear = (QNodePtr)malloc(sizeof(QNode));
+    //如果 Q-&gt;front 为 NULL 说明 内存申请失败，结束程序
+    if (!Q-&gt;front)
+        exit(OVERFLOW);
+    Q-&gt;front-&gt;next = NULL;
+    return Q;
+}
+
+// 销毁队列Q(无论空否均可)
+void Q_Destroy(LinkQueue *Q) {
+    while (Q-&gt;front) {
+        //将队尾指向队头下一个节点的地址（第1个节点）
+        Q-&gt;rear = Q-&gt;front-&gt;next;
+        //回收队头
+        free(Q-&gt;front);
+        //将队头指向队尾（相当于第1个节点变成了队头，然后依次第2个第3个、、、
+        //直到没有下一个节点，也就是 Q-&gt;front == NULL 的时候）
+        Q-&gt;front = Q-&gt;rear;
+    }
+    free(Q);
+}
+
+// 将Q清为空队列
+void Q_Clear(LinkQueue *Q) {
+    QNodePtr p, q;
+    //将队尾指向队头点的地址
+    Q-&gt;rear = Q-&gt;front;
+    //取出第1个节点
+    p = Q-&gt;front-&gt;next;
+    //回收第1个节点
+    Q-&gt;front-&gt;next = NULL;
+    while (p) {
+        //将 q 指向 p（第1个节点）
+        q = p;
+        //将 p 指向 第2个节点
+        p = p-&gt;next;
+        //回收第2个节点
+        free(q);
+    }
+}
+
+// 若Q为空队列，则返回-1，否则返回1
+int Q_Empty(LinkQueue Q) {
+    if (Q.front-&gt;next == NULL)
+        return 1;
+    else
+        return -1;
+}
+
+// 求队列的长度
+int Q_Length(LinkQueue Q) {
+    int i = 0;
+    QNodePtr p;
+    p = Q.front;
+    //遍历队列中的节点，直到队尾等于队头
+    while (Q.rear != p) {
+        i++;
+        p = p-&gt;next;
+    }
+    return i;
+}
+
+// 打印队列中的内容
+void Q_Print(LinkQueue Q) {
+    int i = 0;
+    QNodePtr p;
+    p = Q.front;
+    while (Q.rear != p) {
+        i++;
+        cout &lt;&lt; p-&gt;next-&gt;data &lt;&lt; endl;
+        p = p-&gt;next;
+    }
+}
+
+// 若队列不空，则用e返回Q的队头元素，并返回1，否则返回-1
+int Q_GetHead(LinkQueue Q, int &amp;e) {
+    QNodePtr p;
+    if (Q.front == Q.rear)
+        return -1;
+    p = Q.front-&gt;next;
+    e = p-&gt;data;
+    return 1;
+}
+
+// 插入元素e为Q的新的队尾元素
+void Q_Put(LinkQueue *Q, int e) {
+    QNodePtr p = (QNodePtr)malloc(sizeof(QNode));
+    if (!p) // 存储分配失败
+        exit(OVERFLOW);
+    p-&gt;data = e;
+    p-&gt;next = NULL;
+    //FIFO，将新节点追加到尾节点后面
+    Q-&gt;rear-&gt;next = p;
+    //将新的节点变成尾节点
+    Q-&gt;rear = p;
+}
+
+
+// 若队列不空，删除Q的队头元素，用e返回其值，并返回1，否则返回-1
+int Q_Poll(LinkQueue *Q,int &amp;e) {
+    QNodePtr p;
+    if (Q-&gt;front == Q-&gt;rear)
+        return -1;
+    //取出头节点
+    p = Q-&gt;front-&gt;next;
+    //取出头节点的数据
+    e = p-&gt;data;
+    cout &lt;&lt; e &lt;&lt; endl;
+    Q-&gt;front-&gt;next = p-&gt;next;
+    if (Q-&gt;rear == p)
+        Q-&gt;rear = Q-&gt;front;
+    free(p);
+    cout &lt;&lt; e &lt;&lt; endl;
+    return 1;
+}
+</code></pre>
+<h3 id="_25">循环队列<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<p>循环队列可以更简单防止伪溢出的发生，但队列大小是固定的。</p>
+<pre><code class="language-c">// 队列的顺序存储结构(循环队列)
+#define MAX_QSIZE 5 // 最大队列长度+1
+typedef struct {
+    int *base; // 初始化的动态分配存储空间
+    int front; // 头指针，若队列不空，指向队列头元素
+    int rear; // 尾指针，若队列不空，指向队列尾元素的下一个位置
+} SqQueue;
+
+
+// 构造一个空队列Q
+SqQueue* Q_Init() {
+    SqQueue *Q = (SqQueue*)malloc(sizeof(SqQueue));
+    // 存储分配失败
+    if (!Q){
+        exit(OVERFLOW);
+    }
+    Q-&gt;base = (int *)malloc(MAX_QSIZE * sizeof(int));
+    // 存储分配失败
+    if (!Q-&gt;base){
+        exit(OVERFLOW);
+    }
+    Q-&gt;front = Q-&gt;rear = 0;
+    return Q;
+}
+
+// 销毁队列Q，Q不再存在
+void Q_Destroy(SqQueue *Q) {
+    if (Q-&gt;base)
+        free(Q-&gt;base);
+    Q-&gt;base = NULL;
+    Q-&gt;front = Q-&gt;rear = 0;
+    free(Q);
+}
+
+// 将Q清为空队列
+void Q_Clear(SqQueue *Q) {
+    Q-&gt;front = Q-&gt;rear = 0;
+}
+
+// 若队列Q为空队列，则返回1；否则返回-1
+int Q_Empty(SqQueue Q) {
+    if (Q.front == Q.rear) // 队列空的标志
+        return 1;
+    else
+        return -1;
+}
+
+// 返回Q的元素个数，即队列的长度
+int Q_Length(SqQueue Q) {
+    return (Q.rear - Q.front + MAX_QSIZE) % MAX_QSIZE;
+}
+
+// 若队列不空，则用e返回Q的队头元素，并返回OK；否则返回ERROR
+int Q_GetHead(SqQueue Q, int &amp;e) {
+    if (Q.front == Q.rear) // 队列空
+        return -1;
+    e = Q.base[Q.front];
+    return 1;
+}
+
+// 打印队列中的内容
+void Q_Print(SqQueue Q) {
+    int p = Q.front;
+    while (Q.rear != p) {
+        cout &lt;&lt; Q.base[p] &lt;&lt; endl;
+        p = (p + 1) % MAX_QSIZE;
+    }
+}
+
+// 插入元素e为Q的新的队尾元素
+int Q_Put(SqQueue *Q, int e) {
+    if ((Q-&gt;rear + 1) % MAX_QSIZE == Q-&gt;front) // 队列满
+        return -1;
+    Q-&gt;base[Q-&gt;rear] = e;
+    Q-&gt;rear = (Q-&gt;rear + 1) % MAX_QSIZE;
+    return 1;
+}
+
+// 若队列不空，则删除Q的队头元素，用e返回其值，并返回1；否则返回-1
+int Q_Poll(SqQueue *Q, int &amp;e) {
+    if (Q-&gt;front == Q-&gt;rear) // 队列空
+        return -1;
+    e = Q-&gt;base[Q-&gt;front];
+    Q-&gt;front = (Q-&gt;front + 1) % MAX_QSIZE;
+    return 1;
+}
+</code></pre>
+<h3 id="_26">双端队列<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<p>双端队列(<code>deque</code>，全名<code>double-ended queue</code>)是一种具有队列和栈性质的抽象数据类型。双端队列中的元素可以从两端弹出，插入和删除操作限定在队列的两边进行。</p>
+<h2 id="_27">栈<a class="headerlink" href="#_27" title="Permanent link">&para;</a></h2>
+<p>栈(<code>stack</code>)又称为堆叠，是一种抽象数据类型，只允许在有序的线性数据集合的一端(称为堆栈顶端<code>top</code>)进行加入数据(<code>push</code>)和移除数据(<code>pop</code>)的运算。因而按照后进先出(<code>LIFO</code>， <code>Last In First Out</code>)的原理运作。</p>
+<p>栈常用一维数组或链表来实现。</p>
+<p><img alt="" src="asserts/stack.png" /></p>
+<h3 id="_28">特点<a class="headerlink" href="#_28" title="Permanent link">&para;</a></h3>
+<ul>
+<li>先入后出，后入先出。</li>
+<li>除头尾节点之外，每个元素有一个前驱，一个后继。</li>
+</ul>
+<h3 id="_29">操作<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
+<p>栈使用两种基本操作：</p>
+<ul>
+<li>推入：将数据放入堆栈顶端，堆栈顶端移到新放入的数据。</li>
+<li>弹出：将堆栈顶端数据移除，堆栈顶端移到移除后的下一笔数据。</li>
+</ul>
+<h3 id="_30">数组栈<a class="headerlink" href="#_30" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;stdbool.h&gt;
+#define stack struct Stack
+#define STACK_POP_ERR 42
+
+// 堆疊資料結構 堆栈数据结构
+struct Stack {
+    int val[10]; // 陣列空間
+    int top;     // 堆疊頂端指標（栈顶）
+};
+// 檢查堆疊是否為空
+bool empty(stack *stk) {
+    return stk-&gt;top == 0;
+}
+// 推入資料
+void push(stack *stk, int x) {
+    stk-&gt;top = stk-&gt;top + 1;
+    stk-&gt;val[stk-&gt;top] = x;
+}
+// 彈出并返回資料
+int pop(stack *stk) {
+    if (empty(stk))
+        return STACK_POP_ERR; // 不能彈出
+    else {
+        stk-&gt;top = stk-&gt;top - 1;
+        return stk-&gt;val[stk-&gt;top + 1];
+    }
+}
+int main() {
+    // 宣告并初始化資料結構空間
+    stack stk;
+    stk.top = 0;
+    // 推入四个
+    push(&amp;stk, 3);
+    push(&amp;stk, 4);
+    push(&amp;stk, 1);
+    push(&amp;stk, 9);
+    // 弹出三个
+    printf(&quot;%d &quot;, pop(&amp;stk));
+    printf(&quot;%d &quot;, pop(&amp;stk));
+    printf(&quot;%d &quot;, pop(&amp;stk));
+    return 0;
+}
+</code></pre>
+<h3 id="_31">链式栈<a class="headerlink" href="#_31" title="Permanent link">&para;</a></h3>
+<pre><code class="language-c">#include &lt;stdio.h&gt;
+#include &lt;conio.h&gt;
+#include &lt;stdlib.h&gt;
+
+#define elemType int                            /* 链栈元素数据类型，以整型为例 */
+#define SNODE_SIZE sizeof (struct sNode)        /* 链栈结点空间大小 */
+
+#define status int  /* 状态型变量 */
+#define OVERFLOW -1 /* 内存溢出状态码 */
+#define ERROR 0     /* 错误状态码 */
+#define OK 1        /* 正确状态码 */
+
+/* 链栈结点存储结构 */
+typedef struct sNode {
+    elemType data;
+    struct sNode *next;
+} sNode, *sNodePtr;
+
+/* 链栈存储结构 */
+typedef struct linkStack {
+    sNodePtr top; /* 栈顶指针 */
+} linkStack;
+
+/* 初始化 */
+/* 操作结果：构造一个带头结点的空链栈S */
+void initStack (linkStack *S) {
+    S-&gt;top = (sNodePtr) malloc (SNODE_SIZE); /* 产生头结点，栈顶指针指向此头结点 */
+    if (!S-&gt;top) /* 内存分配失败 */
+        exit (OVERFLOW);
+    S-&gt;top-&gt;next = NULL;
+}
+
+/* 销毁 */
+/* 初始条件：链栈S已存在。操作结果：销毁链栈S */
+void destroyStack (linkStack *S) {
+    sNodePtr p, q;
+
+    p = S-&gt;top; /* p指向S的头结点 */
+    while (p) {
+        q = p-&gt;next; /* q指向p的下一个结点 */
+        free (p); /* 回收p指向的结点 */
+        p = q; /* p移动到下一个结点 */
+    } /* 直到没有下一个结点 */
+}
+
+/* 清空 */
+/* 初始条件：链栈S已存在。操作结果：将S重置为空栈 */
+void clearStack (linkStack *S) {
+    sNodePtr p, q;
+
+    p = S-&gt;top-&gt;next; /* p指向栈的第一个结点 */
+    while (p) {
+        q = p-&gt;next; /* q指向p的下一个结点 */
+        free (p); /* 回收p指向的结点 */
+        p = q; /* p移动到下一个结点 */
+    }  /* 直到没有下一个结点 */
+
+    S-&gt;top-&gt;next = NULL;
+}
+
+/* 判断链栈是否为空 */
+/* 初始条件：链栈S已存在。操作结果：若S为空链栈，则返回TRUE，否则返回FALSE */
+status stackIsEmpty (linkStack *S) {
+    return S-&gt;top-&gt;next == NULL;
+}
+
+/* 求链栈长度 */
+/* 初始条件：链栈S已存在。操作结果：返回S中数据元素个数 */
+int stackLength (linkStack *S) {
+    int i = 0;
+    sNodePtr p;
+
+    p = S-&gt;top-&gt;next; /* p指向栈的第一个结点 */
+    while (p) { /* 未到栈尾 */
+        i++;
+        p = p-&gt;next;
+    }
+
+    return i;
+}
+
+/* 获取栈顶元素 */
+/* 初始条件：链栈S已存在。操作结果：当栈不为空时，将栈顶元素其值赋给e并返回OK，否则返回ERROR */
+status getTopElem (linkStack *S, elemType *e) {
+    sNodePtr p;
+
+    if (stackIsEmpty (S))
+        return ERROR;
+
+    p = S-&gt;top-&gt;next; /* p指向栈的第一个结点 */
+    *e = p-&gt;data;
+
+    return OK;
+}
+
+/* 入栈 */
+/* 操作结果：在S的栈顶插入新的元素e */
+status push (linkStack *S, elemType e) {
+    sNodePtr p;
+
+    p = (sNodePtr) malloc (SNODE_SIZE); /* 产生新结点 */
+    if (!p) /* 内存分配失败 */
+        exit (OVERFLOW);
+
+    p-&gt;data = e;
+    p-&gt;next = S-&gt;top-&gt;next; /* 将新结点链接到原栈顶 */
+    S-&gt;top-&gt;next = p; /* 栈顶指向新结点 */
+}
+
+/* 出栈 */
+/* 操作结果：删除S的栈顶元素，并由e返回其值 */
+status pop (linkStack *S, elemType *e) {
+    sNodePtr p;
+
+    if (stackIsEmpty (S))
+        return ERROR;
+
+    p = S-&gt;top-&gt;next; /* p指向链栈的第一个结点 */
+    *e = p-&gt;data; /* 取出数据 */
+    S-&gt;top-&gt;next = p-&gt;next;
+    free (p); /* 删除该结点 */
+
+    if (S-&gt;top == p) /* 栈为空 */
+        S-&gt;top-&gt;next = NULL;
+
+    return OK;
+}
+
+/* 打印栈内容 */
+/* 初始条件：链栈S已存在。操作结果：当栈不为空时，打印栈内容并返回OK，否则返回ERROR */
+status printStack (linkStack *S) {
+    sNodePtr p;
+
+    if (stackIsEmpty (S))
+        return ERROR;
+
+    p = S-&gt;top-&gt;next;
+    while (p) {
+        printf (&quot;%d\t&quot;, p-&gt;data);
+        p = p-&gt;next;
+    }
+    putchar ('\n');
+
+    return OK;
+}
+</code></pre>
+<h3 id="_32">应用<a class="headerlink" href="#_32" title="Permanent link">&para;</a></h3>
+<ul>
+<li>回溯</li>
+<li>递归</li>
+<li>深度优先搜索</li>
+</ul>
+<h2 id="_33">树<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h2>
+<h3 id="_34">定义<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
+<p>树(<code>tree</code>)是一种抽象数据类型或是实现这种抽象数据类型的数据结构，用来模拟具有树状结构性质的数据集合。它是由<code>n</code>(<code>n&gt;0</code>)个有限节点组成一个具有层次关系的集合。它具有以下的特点：</p>
+<ul>
+<li>每个节点都只有有限个子节点或无子节点；</li>
+<li>没有父节点的节点称为根节点；</li>
+<li>每一个非根节点有且只有一个父节点；</li>
+<li>除了根节点外，每个子节点可以分为多个不相交的子树；</li>
+<li>树里面没有环路(<code>cycle</code>)。</li>
+</ul>
+<p><img alt="" src="asserts/tree.png" /></p>
+<h3 id="_35">术语<a class="headerlink" href="#_35" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>节点的度</strong>：一个节点含有的子树的个数称为该节点的度；</li>
+<li><strong>树的度</strong>：一棵树中，最大的节点度称为树的度；</li>
+<li><strong>叶节点</strong>或<strong>终端节点</strong>：度为零的节点；</li>
+<li><strong>非终端节点</strong>或<strong>分支节点</strong>：度不为零的节点；</li>
+<li>父亲节点或<strong>父节点</strong>：若一个节点含有子节点，则这个节点称为其子节点的父节点；</li>
+<li>孩子节点或<strong>子节点</strong>：一个节点含有的子树的根节点称为该节点的子节点；</li>
+<li><strong>兄弟节点</strong>：具有相同父节点的节点互称为兄弟节点；</li>
+<li>节点的<strong>层</strong>次：从根开始定义起，根为第<code>1</code>层，根的子节点为第<code>2</code>层，以此类推；</li>
+<li><strong>深度</strong>：对于任意节点<code>n</code>，<code>n</code>的深度为从根到<code>n</code>的唯一路径长，根的深度为<code>0</code>；</li>
+<li><strong>高度</strong>：对于任意节点<code>n</code>，<code>n</code>的高度为从<code>n</code>到一片树叶的最长路径长，所有树叶的高度为<code>0</code>；</li>
+<li><strong>堂兄弟节点</strong>：父节点在同一层的节点互为堂兄弟；</li>
+<li><strong>节点的祖先</strong>：从根到该节点所经分支上的所有节点；</li>
+<li><strong>子孙</strong>：以某节点为根的子树中任一节点都称为该节点的子孙。</li>
+<li><strong>森林</strong>：由<code>m</code>(<code>m&gt;=0</code>)棵互不相交的树的集合称为森林；</li>
+</ul>
+<h3 id="_36">分类<a class="headerlink" href="#_36" title="Permanent link">&para;</a></h3>
+<ul>
+<li>无序树：树中任意节点的子节点之间没有顺序关系，这种树称为无序树，也称为<strong>自由树</strong>；</li>
+<li>有序树：树中任意节点的子节点之间有顺序关系，这种树称为有序树；</li>
+<li><strong>二叉树</strong>：每个节点最多含有两个子树的树称为二叉树；<ul>
+<li><strong>完全二叉树</strong>：对于一颗二叉树，假设其深度为<code>d</code>(<code>d&gt;1</code>)。除了第<code>d</code>层外，其它各层的节点数目均已达最大值，且第<code>d</code>层所有节点从左向右连续地紧密排列，这样的二叉树被称为完全二叉树；</li>
+<li><strong>满二叉树</strong>：所有叶节点都在最底层的完全二叉树；</li>
+<li><strong>平衡二叉树</strong>(<code>AVL</code>树)：当且仅当任何节点的两棵子树的高度差不大于<code>1</code>的二叉树；
+  <strong>排序二叉树</strong>(<strong>二叉查找树</strong><code>Binary Search Tree</code>)：也称二叉搜索树、有序二叉树；</li>
+</ul>
+</li>
+<li><strong>霍夫曼树</strong>：带权路径最短的二叉树称为哈夫曼树或最优二叉树；</li>
+<li><code>B</code>树：一种对读写操作进行优化的自平衡的二叉查找树，能够保持数据有序，拥有多于两个子树。</li>
+</ul>
+<p><img alt="" src="asserts/FullBT_CompleteBT.jpg" /></p>
+<h3 id="_37">性质<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
+<ul>
+<li>在二叉树的第<code>i</code>层上最多有 <span class="arithmatex">\(2^{i-1}(i&gt;=1)\)</span>个节点 。</li>
+<li>二叉树中如果深度为<code>k</code>，那么最多有<span class="arithmatex">\(2^k-1(k&gt;=1)\)</span>个节点。</li>
+<li>对任何非空二叉树 ，若<code>n0</code>表示度数为<code>0</code>的节点<code>n2</code>表示度数为<code>2</code>的节点,那么<code>n0=n2+1</code>。</li>
+<li>具有<code>n</code>个结点的完全二叉树的深度为<code>log2 n + 1</code></li>
+</ul>
+<p><img alt="" src="asserts/binary_5_state.png" /></p>
+<h3 id="_38">存储<a class="headerlink" href="#_38" title="Permanent link">&para;</a></h3>
+<h4 id="_39">双亲表示法<a class="headerlink" href="#_39" title="Permanent link">&para;</a></h4>
+<p>假设以一组连续的空间存储树的节点，同时在每个节点中附设一个指示器指示其双亲节点在链表中的位置。这种存储方式利用了每一个节点(除根节点外)都只有一个双亲的性质。</p>
+<p><img alt="" src="asserts/double_parents_notation.png" /></p>
+<h4 id="_40">孩子表示法<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h4>
+<p>使用一个数组存储所有节点，数组中的每个元素是一个链表，存储该节点的所有子节点。</p>
+<p><img alt="" src="asserts/child_notation.png" /></p>
+<h4 id="_41">孩子兄弟表示法<a class="headerlink" href="#_41" title="Permanent link">&para;</a></h4>
+<p>对于树的每一个节点，其左孩子是该节点的第一个孩子节点，右孩子是下一个兄弟节点。</p>
+<p><img alt="" src="asserts/child_sibling_notation.jpg" /></p>
+<h4 id="_42">完全二叉树的存储<a class="headerlink" href="#_42" title="Permanent link">&para;</a></h4>
+<p><font style="color:pink">使用顺序存储结构，对完全二叉树这种结构是非常合适的。</font>可以按照从上之下，从左至右顺序存储<code>n</code>个结点的完全二叉树的<strong>结点父子关系</strong>。</p>
+<p>完全二叉树的这种存储结构，有以下特点</p>
+<ul>
+<li>非根节点(序号<code>i&gt;1</code>)的父节点序号数组下标是<code>int(i/2)</code></li>
+<li>结点(序号为<code>i</code>)的左孩子结点的序号是<code>2i</code>，如果<code>2i&gt;n</code>，则没有左孩子</li>
+<li>结点(序号为<code>i</code>)的右孩子结点的序号是<code>2i+1</code>，如果<code>2i+1&gt;n</code>，则没有右孩子</li>
+</ul>
+<p>一般普通的二叉树，在其空余位置补充控制，当做是完全二叉树，采用数组结构存储，但会导致存储空间的浪费。</p>
+<p><img alt="" src="asserts/complete_tree_sq_storage.png" /></p>
+<h3 id="_43">遍历<a class="headerlink" href="#_43" title="Permanent link">&para;</a></h3>
+<p>树的遍历方式大致分别两种，深度优先遍历(<code>DFS</code>)和广度优先遍历(<code>BFS</code>)。</p>
+<p>前序、中序、后序遍历属于<code>DFS</code>，可以使用递归来实现，但也应该了解非递归的版本；层序遍历属于<code>BFS</code>。</p>
+<h4 id="_44">前序遍历<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
+<p>若二叉树为空，不执行任何操作；否则</p>
+<ul>
+<li>先访问根节点</li>
+<li>前序遍历左子树</li>
+<li>前序遍历右子树</li>
+</ul>
+<p><img alt="" src="asserts/pre_order_traverse.png" /></p>
+<h4 id="_45">中序遍历<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h4>
+<p>若二叉树为空，不执行任何操作；否则</p>
+<ul>
+<li>中序遍历左子树</li>
+<li>访问根节点</li>
+<li>中序遍历右子树</li>
+</ul>
+<p><img alt="" src="asserts/in_order_traverse.png" /></p>
+<h4 id="_46">后序遍历<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h4>
+<p>若二叉树为空，不执行任何操作；否则</p>
+<ul>
+<li>后序遍历左子树</li>
+<li>后序遍历右子树</li>
+<li>访问根节点</li>
+</ul>
+<p><img alt="" src="asserts/post_order_traverse.png" /></p>
+<h4 id="_47">层序遍历<a class="headerlink" href="#_47" title="Permanent link">&para;</a></h4>
+<p>按照顺序输出树的每一层节点。</p>
+<p><img alt="" src="asserts/layer_traverse.png" /></p>
+<h3 id="_48">线索二叉树<a class="headerlink" href="#_48" title="Permanent link">&para;</a></h3>
+<p>线索二叉树的定义如下：</p>
+<p>非线性的二叉树通过以下方式转化为<strong>线性结构</strong>：所有原本为空的右孩子指针改为指向该节点在中序序列中的后继，所有原本为空的左孩子指针改为指向该节点的中序序列的前驱。</p>
+<p><img alt="" src="asserts/clue_tree.png" /></p>
+<p><strong>线索二叉树能线性地遍历二叉树，从而比递归的中序遍历更快</strong>。<strong>使用线索二叉树也能够方便的找到一个节点的父节点，这比显式地使用父亲节点指针或者栈效率更高</strong>。这在栈空间有限，或者无法使用存储父节点的栈时很有作用(对于通过深度优先搜索来查找父节点而言)。</p>
+<p>考虑这样的例子：一个节点<code>k</code>有一个右孩子<code>r</code>，那么<code>r</code>的左指针可能是指向一个孩子节点，或是一个指回<code>k</code>的线索。如果<code>r</code>有左孩子，这个左孩子同样也应该有一个左孩子或是指回<code>k</code>的线索。对于所有的左孩子同理。因此沿着这些从<code>r</code>发出的左指针，最终会找到一个指回<code>k</code>的线索。这种特性是对称的：当<code>q</code>是<code>p</code>的左孩子时，可以沿着<code>q</code>的右孩子找到一个指回<code>p</code>的线索。</p>
+<p>传统的二叉树一般都是以链式存储的结构来表示。这样，二叉树中的每个节点都可以用链表中的一个链节点来存储，每个链节点就包含了若干个指针。但是，这种传统的链式存储结构只能表现出二叉树中节点之间的父子关系，而且不能利用空余的指针来直接得到某个节点的在特定的遍历顺序(先序，中序，后序)中的直接前驱和直接后继。通过分析传统的二叉树链式存储结构表示的二叉树中，存在大量的空闲指针。若能利用这些空指针域来存放指向该节点的直接前驱或是直接后继的指针，则可以进行某些更方便的运算。这些被重新利用起来的空指针就被称为线索，加上了这些线索的二叉树就是线索二叉树。</p>
+<p><strong>对二叉树以某种遍历顺序进行扫描并为每个节点添加线索的过程称为二叉树的线索化，进行线索化的目的是加快查找二叉树中某节点的前驱和后继的速度</strong>。 那么在有<code>N</code>个节点的二叉树中需要利用<code>N+1</code>个空指针添加线索。这是因为在<code>N</code>个节点的二叉树中，每个节点有<code>2</code>个指针，所以一共有<code>2N</code>个指针，除了根节点以外每一个节点都有一个指针从它的父节点指向它，所以一共使用了<code>N-1</code>个指针。所以剩下<code>2N-(N-1) = N+1</code>个空指针。</p>
+<h3 id="huffman"><code>Huffman</code>树<a class="headerlink" href="#huffman" title="Permanent link">&para;</a></h3>
+<p>霍夫曼树又称最<strong>优二叉树</strong>，是一种带权路径长度最短的二叉树。所谓树的带权路径长度，就是树中所有的叶结点的权值乘上其到根结点的路径长度(若根结点为<code>0</code>层，叶结点到根结点的路径长度为叶结点的层数)。树的路径长度是从树根到每一结点的路径长度之和，记为<code>WPL=(W1*L1+W2*L2+W3*L3+...+Wn*Ln)</code>，<code>N</code>个权值<code>Wi(i=1,2,...,n)</code>构成一棵有<code>N</code>个叶结点的二叉树，相应的叶结点的路径长度为<code>Li(i=1,2,...,n)</code>。可以证明霍夫曼树的<code>WPL</code>是最小的。</p>
+<p><strong><code>Huffman</code>算法</strong></p>
+<p>假设有<code>n</code>个权值，则构造出的哈夫曼树有 <code>n</code>个叶子结点。 <code>n</code>个权值分别设为 <code>w1,w2,…,wn</code>，则哈夫曼树的构造规则为：</p>
+<ul>
+<li><code>I.</code>将 <code>w1,w2,…，wn</code>看成是有 <code>n</code> 棵树的森林(每棵树仅有一个结点)；</li>
+<li><code>II.</code>在森林中选出两个根结点的权值最小的树合并，作为一棵新树的左、右子树，且新树的根结点权值为其左、右子树根结点权值之和；</li>
+<li><code>III.</code>从森林中删除选取的两棵树，并将新树加入森林；</li>
+<li><code>IV.</code>重复步骤 <code>I,II</code>，直到森林中只剩下一棵树为止，该树即为所求的哈夫曼树</li>
+</ul>
+<p><img alt="" src="asserts/huffman_algorithm.png" /></p>
+<h2 id="_49">图<a class="headerlink" href="#_49" title="Permanent link">&para;</a></h2>
+<h3 id="_50">定义<a class="headerlink" href="#_50" title="Permanent link">&para;</a></h3>
+<p>图是由顶点和边组成的，可以无边，但至少包含一个顶点。</p>
+<div class="arithmatex">\[
+G = (V,E)
+\]</div>
+<p><code>V</code>代表图中节点的集合，<code>E</code>代表图中边或是关系的集合。</p>
+<p><strong>稠密图</strong>：图中<code>E</code>的条数接近<span class="arithmatex">\(V^2\)</span>也就是，接近任意两点之间相连。
+<strong>稀疏图</strong>：图中<code>E</code>的条数远小于<span class="arithmatex">\(V^2\)</span>。</p>
+<h3 id="_51">分类<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
+<p>图可以分为<strong>有向图</strong>和<strong>无向图</strong>，在图中：</p>
+<ul>
+<li><code>(v, w)</code>表示无向边，即 <code>v</code> 和 <code>w</code> 是互通的</li>
+<li><code>&lt;v, w&gt;</code> 表示有向边，该边始于<code>v</code>，终于<code>w</code></li>
+</ul>
+<p>图可以分为<strong>有权图</strong>和<strong>无权图</strong>：</p>
+<ul>
+<li>有权图：每条边具有一定的权重<code>(weight)</code>，通常是一个数字</li>
+<li>无权图：每条边均没有权重，也可以理解为权重都相同</li>
+</ul>
+<p>图又可以分为<strong>连通图</strong>和<strong>非连通图</strong>：</p>
+<ul>
+<li>连通图：所有的点都有路径相连</li>
+<li>非连通图：存在某两个点没有路径相连</li>
+</ul>
+<h3 id="_52">术语<a class="headerlink" href="#_52" title="Permanent link">&para;</a></h3>
+<p>图中的顶点有度的概念：</p>
+<ul>
+<li>度(<code>Degree</code>)：所有与它连接点的个数之和</li>
+<li>入度(<code>Indegree</code>)：存在于有向图中，所有接入该点的边数之和</li>
+<li>出度(<code>Outdegree</code>)：存在于有向图中，所有接出该点的边数之和</li>
+</ul>
+<h3 id="_53">表示<a class="headerlink" href="#_53" title="Permanent link">&para;</a></h3>
+<h4 id="_54">邻接矩阵<a class="headerlink" href="#_54" title="Permanent link">&para;</a></h4>
+<p>使用一个<code>V×V</code>的二位数组<code>ve</code>表示矩阵，假设<code>i</code>节点于<code>j</code>节点连通，那么<code>ve[i][j]=1</code>。
+邻接矩阵可以表示有向图，和有权重图：<code>ve[j][i]=3</code>表示<code>j -&gt; i</code>权重为<code>3</code>。</p>
+<ul>
+<li>在 <code>n</code> 个顶点的图需要有一个 <code>n × n</code>大小的矩阵</li>
+<li>在一个无权图中，矩阵坐标中每个位置值为 <code>1</code> 代表两个点是相连的，<code>0</code> 表示两点是不相连的</li>
+<li>在一个有权图中，矩阵坐标中每个位置值代表该两点之间的权重，<code>0</code> 表示该两点不相连</li>
+<li>在无向图中，邻接矩阵关于对角线相等</li>
+</ul>
+<p><strong>优点</strong></p>
+<ul>
+<li>对于稠密图能够有效的节省空间。</li>
+<li>表示上很直观，容易判断出那两点之间相连。</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>在矩阵生成时，节点个数就已经确定，只能添加边，不能再添加节点。
+  如果要添加节点，那么需要重新分配矩阵，代价大。</li>
+<li>对于稀疏图，浪费空间。</li>
+<li>在某些算法的时候需要为节点保存额外信息的时候，需要使用额外的容器</li>
+</ul>
+<h4 id="_55">邻接链表<a class="headerlink" href="#_55" title="Permanent link">&para;</a></h4>
+<p>使用一个结构体来表示每个节点：</p>
+<pre><code class="language-cpp">struct Node
+{
+  int ket;
+  Node to;
+  //..其他信息
+}
+</code></pre>
+<p>其中<code>to</code>变量指向链接该节点<code>i</code>指向的第一个节点<code>j</code>，然后<code>j</code>节点中的<code>to</code>指向<code>i</code>节点指向的第二个节点，以此类推。
+邻接矩阵表示的方法灵活方便，能够临时添加节点和边。
+表示有向图，有权重图，还可以根据算法，添加不同的变量。但同时也增加了体积。</p>
+<ul>
+<li>对于每个点，存储着一个链表，用来指向所有与该点直接相连的点</li>
+<li>对于有权图来说，链表中元素值对应着权重</li>
+</ul>
+<p><strong>缺点</strong></p>
+<ul>
+<li>稠密图中浪费空间</li>
+<li>不直观，在有向图中如果要同时表示指向本节点的节点，和本节点指向的节点，需要额外的一个字段。</li>
+</ul>
+<h4 id="_56">示意图<a class="headerlink" href="#_56" title="Permanent link">&para;</a></h4>
+<h5 id="_57">无向无权图<a class="headerlink" href="#_57" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="asserts/no_dire_no_weight.jpg" /></p>
+<h5 id="_58">无向有权图<a class="headerlink" href="#_58" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="asserts/no_dire_weight.jpg" /></p>
+<h5 id="_59">有向有权图<a class="headerlink" href="#_59" title="Permanent link">&para;</a></h5>
+<p><img alt="" src="asserts/dire_weight.jpg" /></p>
+<h4 id="_60">对比<a class="headerlink" href="#_60" title="Permanent link">&para;</a></h4>
+<ul>
+<li>邻接矩阵由于没有相连的边也占有空间，因此存在浪费空间的问题，而邻接链表则比较合理地利用空间</li>
+<li>邻接链表比较耗时，牺牲很大的时间来查找，因此比较耗时，而邻接矩阵法相比邻接链表法来说，时间复杂度低。</li>
+</ul>
+<h3 id="_61">遍历<a class="headerlink" href="#_61" title="Permanent link">&para;</a></h3>
+<h4 id="depth-first-searchdfs">深度优先遍历(<code>Depth First Search</code>，<code>DFS</code>)<a class="headerlink" href="#depth-first-searchdfs" title="Permanent link">&para;</a></h4>
+<h5 id="_62">基本思路<a class="headerlink" href="#_62" title="Permanent link">&para;</a></h5>
+<p>从图中某顶点 <code>v</code> 出发</p>
+<ol>
+<li>访问顶点 <code>v</code></li>
+<li>从<code>v</code> 的未被访问的邻接点中选取一个顶点 <code>w</code>，从 <code>w</code> 出发进行深度优先遍历</li>
+<li>重复上述两步，直至图中所有和<code>v</code>有路径相通的顶点都被访问到</li>
+</ol>
+<p><img alt="" src="asserts/dfs.gif" /></p>
+<h5 id="_63">伪代码<a class="headerlink" href="#_63" title="Permanent link">&para;</a></h5>
+<pre><code class="language-java">//类似于树的先序遍历
+public void DFS(Vertex V) {
+    visited[V] = true;
+    for(W : each adjacent potin of V) {
+        if(!visited[W]) {
+            DFS(W);
+        }
+    }
+}
+</code></pre>
+<h4 id="breadth-first-searchbfs">广度优先搜索(<code>Breadth First Search</code>，<code>BFS</code>)<a class="headerlink" href="#breadth-first-searchbfs" title="Permanent link">&para;</a></h4>
+<p><code>BFS</code>需要一个队列以保持遍历过的顶点顺序，以便按出队的顺序再去访问这些顶点的邻接顶点。</p>
+<h5 id="_64">实现思路<a class="headerlink" href="#_64" title="Permanent link">&para;</a></h5>
+<ol>
+<li>顶点<code>v</code> 入队列</li>
+<li>当队列非空时则继续执行，否则算法结束</li>
+<li>出队列取得队头顶点<code>v</code>；访问顶点 <code>v</code>并标记顶点<code>v</code>已被访问</li>
+<li>查找顶点 <code>v</code> 的第一个邻接顶点 <code>col</code></li>
+<li>若 <code>v</code> 的邻接顶点 <code>col</code> 未被访问过的，则 <code>col</code> 继续</li>
+<li>查找顶点<code>v</code> 的另一个新的邻接顶点 <code>col</code>，转到步骤 <code>5</code> 入队列，直到顶点<code>v</code> 的所有未被访问过的邻接点处理完。转到步骤 <code>2</code></li>
+</ol>
+<p><img alt="" src="asserts/bfs.gif" /></p>
+<h3 id="_65">拓扑排序<a class="headerlink" href="#_65" title="Permanent link">&para;</a></h3>
+<h5 id="_66">是什么<a class="headerlink" href="#_66" title="Permanent link">&para;</a></h5>
+<p>图中节点视为事件，拓扑排序的目的是依据图中事件发生的先后顺序给出一个可能的排序。</p>
+<p>图能够进行图谱排序的前提：</p>
+<ul>
+<li>有向图：有向图才能表示两件事情之间发生的先后关系。</li>
+<li>无环：也就是不存在环，如果存在的话，那么事件发生的先后关系将不确定。</li>
+</ul>
+<p><img alt="" src="asserts/topological_sort.jpeg" /></p>
+<h5 id="_67">全序和偏序<a class="headerlink" href="#_67" title="Permanent link">&para;</a></h5>
+<p>全序指的是一个集合中<strong>任意两个元素之间能够比较</strong>，也就是说能够排序。</p>
+<p>偏序指的是，集合中存在不能比较的元素(这里的不能是指的某一对之间不能，而不是该元素和其他元素不能比较)比如说，快排是一种不稳定的排序，因为两个值相同的元素之间的顺序是不稳定的。而选择排序除了比较指的大小以外，还比较了两个元素在数组中出现的顺序。</p>
+<h3 id="minimum-spanning-treesmst">最小生成树(<code>Minimum Spanning Trees</code>,<code>MST</code>)<a class="headerlink" href="#minimum-spanning-treesmst" title="Permanent link">&para;</a></h3>
+<h4 id="_68">提出问题<a class="headerlink" href="#_68" title="Permanent link">&para;</a></h4>
+<p>要在<code>n</code> 个城市之间铺设光缆，主要目标是要使这 <code>n</code>个城市的任意两个之间都可以通信，但铺设光缆的费用很高，且各个城市之间铺设光缆的费用不同，因此另一个目标是要使铺设光缆的总费用最低。这就需要找到带权的最小生成树。</p>
+<h4 id="_69">特点<a class="headerlink" href="#_69" title="Permanent link">&para;</a></h4>
+<ul>
+<li>该树是连通的</li>
+<li>权值之和最小</li>
+<li>边数比顶点个数少 <code>1</code></li>
+</ul>
+<h4 id="_70">存在个数<a class="headerlink" href="#_70" title="Permanent link">&para;</a></h4>
+<p>最小生成树在一些情况下可能会有多个。</p>
+<ul>
+<li>当图的每一条边的权值都相同时，该图的所有生成树都是最小生成树</li>
+<li>如果图的每一条边的权值都互不相同，那么最小生成树将只有一个</li>
+</ul>
+<p><img alt="" src="asserts/MST.png" /></p>
+<p>生成最小生成树的算法一般有两种，分别是 <code>Prim</code> 算法和 <code>Kruskal</code> 算法</p>
+<h4 id="prim"><code>Prim</code> 算法<a class="headerlink" href="#prim" title="Permanent link">&para;</a></h4>
+<p><strong>算法步骤</strong></p>
+<ol>
+<li>输入：一个加权连通图，其中顶点集合为 <code>V</code>，边集合为 <code>E</code>；</li>
+<li>初始化：<span class="arithmatex">\(V_{new}= \{x\}\)</span> ，其中 <code>x</code> 为集合 <code>V</code> 中的任一节点(起始点)，<span class="arithmatex">\(Enew = \{\}\)</span> (为空)；</li>
+<li>在集合 <code>E</code> 中选取权值最小的边 <code>&lt;u, v&gt;</code>，其中 <code>u</code> 为集合 <span class="arithmatex">\(V_{new}\)</span> 中的元素，而 <code>v</code>不在 <span class="arithmatex">\(V_{new}\)</span> 集合当中，并且 <span class="arithmatex">\(v∈V\)</span> (如果存在有多条满足前述条件即具有相同权值的边，则可任意选取其中之一)；</li>
+<li>将<code>v</code> 加入集合<span class="arithmatex">\(V_{new}\)</span>中，将<code>&lt;u, v&gt;</code>边加入集合<span class="arithmatex">\(E_{new}\)</span>中；</li>
+<li>重复步骤 <code>3</code>、<code>4</code>直到 <span class="arithmatex">\(V_{new} = V\)</span>。</li>
+</ol>
+<p>时间复杂度：<span class="arithmatex">\(O(V^2)\)</span></p>
+<h4 id="kruskal"><code>Kruskal</code> 算法<a class="headerlink" href="#kruskal" title="Permanent link">&para;</a></h4>
+<p>需要一个集合用来升序存储所有边。</p>
+<p><strong>算法步骤</strong></p>
+<ol>
+<li>先构造一个只含有 <code>n</code> 个顶点，而边集为空的子图；</li>
+<li>从边集 <code>E</code> 中选取一条权值最小的边，若该条边的两个顶点分属不同的树，则将其加入子图。(也就是说，将这两个顶点分别所在的两棵树合成一棵树)反之，若该条边的两个顶点已落在同一棵树上，则不可取，而应该取下一条权值最小的边再试之；</li>
+<li>重复步骤 <code>2</code>，直到所有点连通。</li>
+</ol>
+<p>时间复杂度：<span class="arithmatex">\(O(Elog_2V)\)</span></p>
+<h3 id="_71">最短路径问题<a class="headerlink" href="#_71" title="Permanent link">&para;</a></h3>
+<h4 id="dijkstra"><code>Dijkstra</code>算法<a class="headerlink" href="#dijkstra" title="Permanent link">&para;</a></h4>
+<h5 id="_72">是什么<a class="headerlink" href="#_72" title="Permanent link">&para;</a></h5>
+<p><code>Dijkstra</code>算法是典型的单源最短路径算法，用于计算一个节点到其他所有节点的最短路径。主要特点是以起始点为中心向外层层扩展，直到扩展到终点为止。<code>Dijkstra</code>算法要求图中不存在负权边。</p>
+<h5 id="_73">问题描述<a class="headerlink" href="#_73" title="Permanent link">&para;</a></h5>
+<p>在无向图 <code>G=(V,E)</code> 中，假设每条边 <code>E[i]</code>的长度为 <code>w[i]</code>，找到由顶点 <code>V0</code> 到其余各点的最短路径。</p>
+<h5 id="_74">算法思想<a class="headerlink" href="#_74" title="Permanent link">&para;</a></h5>
+<p>设<code>G=(V,E)</code>是一个带权有向图，把图中顶点集合<code>V</code>分成两组，第一组为已求出最短路径的顶点集合(用<code>S</code>表示，初始时<code>S</code>中只有一个源点，以后每求得一条最短路径 , 就将加入到集合<code>S</code>中，直到全部顶点都加入到<code>S</code>中，算法就结束了)，第二组为其余未确定最短路径的顶点集合(用<code>U</code>表示)，按最短路径长度的递增次序依次把第二组的顶点加入<code>S</code>中。在加入的过程中，总保持从源点<code>v</code>到<code>S</code>中各顶点的最短路径长度不大于从源点<code>v</code>到<code>U</code>中任何顶点的最短路径长度。此外，每个顶点对应一个距离，<code>S</code>中的顶点的距离就是从<code>v</code>到此顶点的最短路径长度，<code>U</code>中的顶点的距离，是从<code>v</code>到此顶点只包括<code>S</code>中的顶点为中间顶点的当前最短路径长度。</p>
+<p><img alt="" src="asserts/Dijkstras_progress_animation.gif" /></p>
+<h5 id="_75">算法步骤<a class="headerlink" href="#_75" title="Permanent link">&para;</a></h5>
+<p><code>I.</code>初始时，<code>S</code>只包含源点，即<code>S＝{v}</code>，<code>v</code>的距离为<code>0</code>。<code>U</code>包含除<code>v</code>外的其他顶点，即：<code>U=V-{v}</code>，若<code>v</code>与<code>U</code>中顶点<code>u</code>有边，则<code>&lt;u,v&gt;</code>正常有权值，若<code>u</code>不是<code>v</code>的出边邻接点，则<code>&lt;u,v&gt;</code>权值为<code>∞</code>。</p>
+<p><code>II.</code>从<code>U</code>中选取一个距离<code>v</code>最小的顶点<code>k</code>，把<code>k</code>加入<code>S</code>中(该选定的距离就是<code>v</code>到<code>k</code>的最短路径长度)。</p>
+<p><code>III.</code>以<code>k</code>为新考虑的中间点，修改<code>U</code>中各顶点的距离；若从源点<code>v</code>到顶点<code>u</code>的距离(经过顶点<code>k</code>)比原来距离(不经过顶点<code>k</code>)短，则修改顶点<code>u</code>的距离值，修改后的距离值的顶点<code>k</code>的距离加上边上的权。</p>
+<p><code>IV.</code>重复步骤<code>II</code>和<code>III</code>直到所有顶点都包含在<code>S</code>中。</p>
+<p>示意图如下。</p>
+<p><img alt="" src="asserts/Dijkstra_Animation.gif" /></p>
+<h5 id="_76">伪代码<a class="headerlink" href="#_76" title="Permanent link">&para;</a></h5>
+<pre><code class="language-cpp">function Dijkstra(G, w, s)
+     for each vertex v in V[G]        // 初始化
+          d[v] := infinity           // 将各点的已知最短距离先设成无穷大
+          previous[v] := undefined   // 各点的已知最短路径上的前趋都未知
+     d[s] := 0       // 因为出发点到出发点间不需移动任何距离，所以可以直接将s到s的最小距离设为0
+     S := empty set
+     Q := set of all vertices
+     while Q is not an empty set      // Dijkstra算法主体
+           u := Extract_Min(Q)
+           S.append(u)
+           for each edge outgoing from u as (u,v)
+                  if d[v] &gt; d[u] + w(u,v)     // 拓展边（u,v）。w(u,v)为从u到v的路径长度。
+                        d[v] := d[u] + w(u,v)         // 更新路径长度到更小的那个和值。
+                        previous[v] := u              // 纪录前趋顶点
+</code></pre>
+<h4 id="floyd"><code>Floyd</code>算法<a class="headerlink" href="#floyd" title="Permanent link">&para;</a></h4>
+<h5 id="_77">是什么<a class="headerlink" href="#_77" title="Permanent link">&para;</a></h5>
+<p><code>Floyd-Warshall</code>算法是解决任意两点间的最短路径的一种算法，可以正确处理有向图或负权的最短路径问题，同时也被用于计算有向图的传递闭包。<code>Floyd-Warshall</code>算法的时间复杂度为<span class="arithmatex">\(O(N^3)\)</span>，空间复杂度为<span class="arithmatex">\(O(N^2)\)</span>。</p>
+<h5 id="_78">算法思想<a class="headerlink" href="#_78" title="Permanent link">&para;</a></h5>
+<p><code>Floyd</code>算法是一个经典的动态规划算法。换句话说，首先我们的目标是寻找从点 i 到点 j 的最短路径。从动态规划的角度看问题，我们需要为这个目标重新做一个诠释。</p>
+<p>从任意节点<code>i</code>到任意节点<code>j</code>的最短路径不外乎<code>2</code>种可能，第一种是直接从<code>i</code>到 j，第二种是从<code>i</code>经过若干个节点<code>k</code>到<code>j</code>。所以，假设<code>distance(i,j)</code>为节点<code>u</code>到节点<code>v</code>的最短路径的距离，对于每一个节点<code>k</code>，检查<code>distance(i,k) + distance(k,j) &lt; distance(i,j)</code>是否成立，如果成立，证明从<code>i</code>到<code>k</code>再到<code>j</code>的路径比<code>i</code>直接到<code>j</code>的路径短，就设置<code>distance(i,j) = distance(i,k) + distance(k,j)</code>，这样一来，当遍历完所有节点<code>k</code>，<code>distance(i,j)</code>中记录的便是<code>i</code>到<code>j</code>的最短路径的距离。</p>
+<h5 id="_79">算法步骤<a class="headerlink" href="#_79" title="Permanent link">&para;</a></h5>
+<p><code>I.</code>从任意一条单边路径开始。所有两点之间的距离是边的权，如果两点之间没有边相连，则权为无穷大。</p>
+<p><code>II.</code>对于每一对顶点 <code>u</code> 和<code>v</code>，看看是否存在一个顶点 <code>w</code> 使得从 <code>u</code> 到 <code>w</code> 再到 <code>v</code> 比己知的路径更短。如果是更新它。</p>
+<h5 id="_80">伪代码<a class="headerlink" href="#_80" title="Permanent link">&para;</a></h5>
+<pre><code class="language-cpp">let dist be a |V| × |V| array of minimum distances initialized to ∞ (infinity)
+for each vertex v
+    dist[v][v] ← 0
+for each edge (u,v)
+    dist[u][v] ← w(u,v)  // the weight of the edge (u,v)
+for k from 1 to |V|
+    for i from 1 to |V|
+       for j from 1 to |V|
+          if dist[i][j] &gt; dist[i][k] + dist[k][j]
+              dist[i][j] ← dist[i][k] + dist[k][j]
+          end if
+</code></pre>
+<h2 id="_81">参考资料<a class="headerlink" href="#_81" title="Permanent link">&para;</a></h2>
+<p><a href="https://zh.wikipedia.org/wiki/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84">数据结构 - Wikipedia</a></p></div>
+        
+        
+    </div>
+
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>TechDocs is licensed under the <a href='https://creativecommons.org/licenses/by-nc-nd/4.0/'>CC BY-NC-ND 4.0</a>.</small><br>
+            
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
+
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    <script>var base_url = "../.."</script>
+    
+        <script>var shortcuts = {"help": 191, "next": 39, "previous": 37, "search": 83}</script>
+    
+    <script src="../../js/base.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../../search/main.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+            </div>
+            <div class="modal-body">
+                <p>
+                    From here you can search these documents. Enter
+                    your search terms below.
+                </p>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    </body>
+
+</html>
