@@ -25,13 +25,16 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+# extra_css:
+#   - stylesheets/typo.css
+
 extra_javascript:
   # MathJax 支持
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 shortcuts:
-    help: 191    # ?
-    next: 39     # right arrow
-    previous: 37 # left
-    search: 83   # s
+  help: 191 # ?
+  next: 39 # right arrow
+  previous: 37 # left
+  search: 83 # s
