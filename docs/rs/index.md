@@ -1,6 +1,6 @@
 # 资源
 
-- ✂️ Modern copy to clipboard. No Flash. Just 3kb gzipped 📋</br>
+- ✂️ Modern copy to clipboard. No Fla¨sh. Just 3kb gzipped 📋</br>
   [https://github.com/zenorocha/clipboard.js](https://github.com/zenorocha/clipboard.js)
 
 - Best practices for modern web development</br>
